@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 200px;
+        background-color: red;
+        margin: 200px;
+        animation: mymove ease-in-out 1s infinite ;
+      }
+      /* 设置动画属性
+           */
+      /* .box:hover {
+        animation: mymove ease-in-out 1s infinite alternate reverse,
+          mymove2 ease-in-out 1s infinite alternate;
+      } */
+      @keyframes mymove {
+        0% {
+          transform: rotate(0deg)
+        }
+        to {
+          transform: rotate(360deg)
+        }
+      }
+      /* 定义动画 关键帧 */
+      @keyframes mymove2 {
+        /* 动画时间节点 */
+        /* from 等效于 %0，to 等效于 100% */
+        from {
+          background-color: red;
+          opacity: 1;
+        }
+        to {
+          background-color: blue;
+          opacity: 0.5;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
